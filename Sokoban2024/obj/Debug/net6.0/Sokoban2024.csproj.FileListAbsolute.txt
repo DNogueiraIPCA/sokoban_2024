@@ -23,3 +23,8 @@ C:\Daniel\ipca\2023-2024\desenvolvimento\sokoban_2024\Sokoban2024\obj\Debug\net6
 C:\Daniel\ipca\2023-2024\desenvolvimento\sokoban_2024\Sokoban2024\obj\Debug\net6.0\Sokoban2024.pdb
 C:\Daniel\ipca\2023-2024\desenvolvimento\sokoban_2024\Sokoban2024\obj\Debug\net6.0\Sokoban2024.genruntimeconfig.cache
 C:\Daniel\ipca\2023-2024\desenvolvimento\sokoban_2024\Sokoban2024\obj\Debug\net6.0\ref\Sokoban2024.dll
+C:\Daniel\ipca\2023-2024\desenvolvimento\sokoban_2024\Sokoban2024\bin\Debug\net6.0\Content\Character4.xnb
+C:\Daniel\ipca\2023-2024\desenvolvimento\sokoban_2024\Sokoban2024\bin\Debug\net6.0\Content\Crate_Brown.xnb
+C:\Daniel\ipca\2023-2024\desenvolvimento\sokoban_2024\Sokoban2024\bin\Debug\net6.0\Content\EndPoint_Blue.xnb
+C:\Daniel\ipca\2023-2024\desenvolvimento\sokoban_2024\Sokoban2024\bin\Debug\net6.0\Content\File.xnb
+C:\Daniel\ipca\2023-2024\desenvolvimento\sokoban_2024\Sokoban2024\bin\Debug\net6.0\Content\Wall_Brown.xnb
