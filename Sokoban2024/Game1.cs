@@ -15,7 +15,7 @@ namespace Sokoban2024
         private char[,] level;
         private Texture2D player, dot, box, wall; //Load images Texture 
         int tileSize = 64; //potencias de 2 (operações binárias)
-
+        private Player sokoban;
 
 
 
@@ -66,9 +66,10 @@ namespace Sokoban2024
             // TODO: Add your drawing code here
             _spriteBatch.Begin();
 
-            //_spriteBatch.DrawString(font, "O texto que quiser", new Vector2(0, 0), Color.Black);
-            //_spriteBatch.DrawString(font, $"Numero de Linhas = {nrLinhas} -- Numero de Colunas = {nrColunas}", new Vector2(300, 10), Color.Black);
-            
+            _spriteBatch.DrawString(font, $"Numero de Linhas  = {nrLinhas}", new Vector2(0, 0), Color.Black);
+            _spriteBatch.DrawString(font, $"Numero de Colunas = {nrColunas}", new Vector2(0,30), Color.Black);
+            _spriteBatch.DrawString(font, "O texto que quiser", new Vector2(0, 60), Color.Black);
+
             Rectangle position = new Rectangle(0, 0, tileSize, tileSize); //calculo do retangulo a depender do tileSize
             for (int x = 0; x < level.GetLength(0); x++)  //pega a primeira dimensão
             {
@@ -79,9 +80,9 @@ namespace Sokoban2024
 
                     switch (level[x, y])
                     {
-                        case 'Y':
-                            _spriteBatch.Draw(player, position, Color.White);
-                            break;
+                        //case 'Y':
+                        //    _spriteBatch.Draw(player, position, Color.White);
+                        //    break;
                         case '#':
                             _spriteBatch.Draw(box, position, Color.White);
                             break;
@@ -92,8 +93,12 @@ namespace Sokoban2024
                             _spriteBatch.Draw(wall, position, Color.White);
                             break;
                     }
+                    
                 }
             }
+            position.X = sokoban.Position.X * tileSize; //posição do Player
+            position.Y = sokoban.Position.Y * tileSize; //posição do Player
+            _spriteBatch.Draw(player, position, Color.White); //desenha o Player
 
             _spriteBatch.End();
 
@@ -113,7 +118,15 @@ namespace Sokoban2024
             {
                 for (int y = 0; y < nrLinhas; y++)
                 {
-                    level[x, y] = linhas[y][x];
+                    if (linhas[y][x] == 'Y')
+                    {
+                        sokoban = new Player(x, y);
+                        level[x, y] = ' '; // put a blank instead of the sokoban 'Y'
+                    }
+                    else
+                    {
+                        level[x, y] = linhas[y][x];
+                    }
                 }
             }
 
